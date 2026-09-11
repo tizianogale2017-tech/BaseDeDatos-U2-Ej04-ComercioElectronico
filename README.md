@@ -1,6 +1,6 @@
 # ComercioElectronico
 
-Base de Datos - Unidad 1 - Ejercicio 0X
+Base de Datos - Unidad 2 - Ejercicio 4
 
 ## Consigna
 Modelar el esquema de datos de una plataforma de comercio electrónico, contemplando categorías de productos (con subcategorías), productos, clientes, direcciones de envío, pedidos, el detalle de cada pedido y el transportista que lo despacha.
