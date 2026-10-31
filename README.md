@@ -14,3 +14,27 @@ Modelar el esquema de datos de una plataforma de comercio electrónico, contempl
 
 ## Resultado
 <img width="2340" height="2100" alt="BaseDeDatos-U1-Ej04-ComercioElectronico" src="https://github.com/user-attachments/assets/f753e430-1822-4816-83de-df9d41524b9c" />
+
+---
+
+## Normalización
+
+Se normaliza el documento `Pedido` con sus registros de `Detalle_Pedido`. En todas las tablas la PK va en la primera columna y las FK al final. Los datos son de ejemplo.
+
+**Forma 0.** Una sola tabla con todo junto. Hay celdas con listas: cada pedido puede tener varios registros de detalle pedido, y los nombres vienen completos en una sola columna.
+
+![Forma 0](normalizacion/00-forma-0.png)
+
+**1FN.** Se separan nombre y apellido. Cada elemento de la lista pasa a su propia fila y la clave queda compuesta: (`id_pedido`, `id_producto`).
+
+![1FN](normalizacion/01-1fn.png)
+
+**2FN.** Los datos de pedido dependen solo de `id_pedido` y los de producto solo de `id_producto`. Se separan en `Pedido` y `Producto`; `Detalle_Pedido` queda con la clave compuesta y lo que depende de ambos.
+
+![2FN](normalizacion/02-2fn.png)
+
+**3FN.** Los datos de `Cliente`, `Direccion`, `Transportista` y `Categoria` dependen de su propio identificador y no de la PK de pedido, así que pasan a tablas aparte. En el modelo final cada tabla usa su id propio.
+
+![3FN](normalizacion/03-3fn.png)
+
+Para que se vea la lista en la Forma 0, se agregó un registro de ejemplo en `Detalle_Pedido` para el pedido 1.
