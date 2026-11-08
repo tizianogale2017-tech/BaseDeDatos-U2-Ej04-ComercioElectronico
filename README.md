@@ -13,7 +13,10 @@ Modelar el esquema de datos de una plataforma de comercio electrónico, contempl
 - La relación M:N entre **PEDIDO** y **PRODUCTO** se resolvió con la entidad intermedia **DETALLE_PEDIDO**, conectada con 1:N a **PEDIDO** (`contiene`) y 1:N a **PRODUCTO** (`incluye`). Esta entidad guarda los datos propios de esa línea de pedido (cantidad, precio al momento de la compra, etc.), ya que el precio del producto puede cambiar con el tiempo y necesitamos el valor histórico.
 
 ## Resultado
-<img width="2340" height="2100" alt="BaseDeDatos-U1-Ej04-ComercioElectronico" src="https://github.com/user-attachments/assets/f753e430-1822-4816-83de-df9d41524b9c" />
+
+![Diagrama](captura.png)
+
+Atributos agregados para llegar al id más 5: `nivel`, `estado` y `fecha_alta` (Categoría), `descripcion` (Producto), `provincia` (Dirección), `email` (Transportista) y `numero_orden` y `numero_guia` (Pedido, ambos de la consigna).
 
 ---
 
