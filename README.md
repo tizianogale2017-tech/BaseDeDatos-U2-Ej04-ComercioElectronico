@@ -16,8 +16,6 @@ Modelar el esquema de datos de una plataforma de comercio electrónico, contempl
 
 ![Diagrama](captura.png)
 
-Atributos agregados para llegar al id más 5: `nivel`, `estado` y `fecha_alta` (Categoría), `descripcion` (Producto), `provincia` (Dirección), `email` (Transportista) y `numero_orden` y `numero_guia` (Pedido, ambos de la consigna).
-
 ---
 
 ## Normalización
